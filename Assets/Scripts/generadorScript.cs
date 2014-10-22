@@ -15,7 +15,7 @@ public class generadorScript : MonoBehaviour {
 	void Update () {
 		if (Time.time > timer) {
 
-			var altura = Random.Range(-1.5f,1.5f);
+			var altura = Random.Range(-1.7f,1.7f);
 			var tipocolumna = Random.Range(0,columna.Length);
 			var nuevacolumna = (GameObject)Instantiate(columna[tipocolumna],new Vector3 (posicion.x, posicion.y+altura, posicion.z),transform.rotation);
 
