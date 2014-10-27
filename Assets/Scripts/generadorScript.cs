@@ -13,6 +13,7 @@ public class generadorScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(!GameControl.dead){
 		if (Time.time > timer) {
 
 			var altura = Random.Range(-1.7f,1.7f);
@@ -24,6 +25,7 @@ public class generadorScript : MonoBehaviour {
 			Destroy(nuevacolumna, tiempoespera*3);
 
 			timer=Time.time+tiempoespera;
+			}
 				}
 	}
 }

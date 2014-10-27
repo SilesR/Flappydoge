@@ -9,6 +9,8 @@ public class Columna : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		movimiento = new Vector3 (vhorizontal, 0, 0);
-		transform.Translate (movimiento * Time.deltaTime);
+		if (!GameControl.dead) {
+						transform.Translate (movimiento * Time.deltaTime);
+				}
 	}
 }
