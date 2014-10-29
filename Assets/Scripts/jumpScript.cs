@@ -35,14 +35,25 @@ public class jumpScript : MonoBehaviour {
 			
 		}
 	}
-	
-	void OnCollisionEnter2D(Collision2D col)
-	{
+	public void restart (){
+		GameControl.dead = false;
+		Application.LoadLevel (Application.loadedLevel);
+		
+	}
+
+	void OnCollisionEnter2D(Collision2D col) {
+		if (col.gameObject.tag == "Enemy") {
 		if(!GameControl.dead){
+				GameControl.vida = GameControl.vida -1;
+				if (GameControl.vida == 0){
 			GameControl.dead = true;
 			AudioSource.PlayClipAtPoint(deadSound, transform.position);
 			//anim.SetBool("dead",true);
 			rigidbody2D.gravityScale = 4;
+				restart();
+				}
+			}
+		
 		}
 	}
 }

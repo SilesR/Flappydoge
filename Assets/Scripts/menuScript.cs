@@ -25,6 +25,7 @@ public class menuScript : MonoBehaviour {
 				Application.LoadLevel (Application.loadedLevel);
 
 		}
+
 	public void quit(){
 				Application.Quit ();
 		}

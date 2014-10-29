@@ -7,8 +7,7 @@ public class movimientoScript : MonoBehaviour {
 	public int vvertical = 10;
 
 	Vector3 movimiento;
-	Vector3 posicionRaton;
-	// Update is called once per frame
+
 	void Update () {
 
 		var v = Input.GetAxis ("Vertical");
